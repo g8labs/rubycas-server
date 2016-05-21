@@ -1,0 +1,8 @@
+<%# coding: UTF-8 -%>
+<form method="post" action="<%= @form_action || "login" %>" id="login-form" onsubmit="submitbutton = document.getElementById('login-submit'); submitbutton.value='<%= t.notice.please_wait %>'; submitbutton.disabled=true; return true;">
+	<input class="input" placeholder="username" type="text" id="username" name="username" accesskey="u">
+	<input class="input" placeholder="password" type="password" id="password" name="password" accesskey="p" autocomplete="off">
+  <input type="hidden" id="lt" name="lt" value="<%= escape_html @lt %>" />
+  <input type="hidden" id="service" name="service" value="<%= escape_html @service %>" />
+	<input class="submit" value="Login" type="submit" accesskey="l" value="<%= t.button.login %>" id="login-submit">
+</form>
